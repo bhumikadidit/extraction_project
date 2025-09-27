@@ -8,7 +8,7 @@ import time
 BASE_URL = "https://pokharamun.gov.np/news-notices"
 MAX_PAGES = 100  # Stop if no more pages
 DELAY = 1  # Seconds between requests
-OUTPUT_FILE = "pokhara_mun_notices_last_2yrs_duplicate.csv"
+OUTPUT_FILE = "pokhara_mun_notices_last_2yrs.csv"
 
 def parse_date(date_str):
     """Parse date like 'Thu, 09/27/2018 - 15:44' to 'YYYY-MM-DD'."""
@@ -18,7 +18,7 @@ def parse_date(date_str):
         # Extract MM/DD/YYYY part
         date_part = date_str.split(',')[1].strip().split(' - ')[0].strip()
         parsed = datetime.strptime(date_part, '%m/%d/%Y')
-        return parsed.strftime('%Y-%m-%d')
+        return parsed
     except (ValueError, IndexError):
         return None
 
@@ -80,7 +80,7 @@ def filter_last_two_years(notices):
     cutoff = datetime.now() - timedelta(days=730)  # 2 years approx.
     filtered = []
     for notice in notices:
-        pub_date = datetime.strptime(notice['Date'], '%Y-%m-%d')
+        pub_date = notice['Date']
         if pub_date >= cutoff:
             filtered.append(notice)
     return filtered
