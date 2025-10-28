@@ -1,9 +1,9 @@
 # Data files - DON'T commit large files
-data/raw/pdfs/
-data/temp/
-*.pdf
-*.PDF
-*.csv.backup
+# data/raw/pdfs/
+# data/temp/
+# *.pdf
+# *.PDF
+# *.csv.backup
 
 # Python
 __pycache__/
