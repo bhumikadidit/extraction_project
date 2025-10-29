@@ -178,3 +178,12 @@ def scrape_pokhara_notices_last_2years(base_url="https://pokharamun.gov.np/news-
 
 
 
+def main():
+    """Main function to run all web scraping tasks"""
+    print("Running Pokhara municipality web scraping...")
+    scrape_pokhara_news()
+    scrape_pokhara_notices_last_2years()
+
+if __name__ == "__main__":
+    main()
+
