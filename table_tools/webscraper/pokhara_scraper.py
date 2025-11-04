@@ -40,7 +40,7 @@ def scrape_notices_last_2years(base_url="https://pokharamun.gov.np/news-notices"
             response = session.get(url, timeout=30)
             response.raise_for_status()
             response.encoding = 'utf-8'
-            soup = BeautifulSoup(response.content, 'lxml')
+            soup = BeautifulSoup(response.content, 'html.parser')
             rows = soup.find_all('div', class_='node-article')
             if not rows:
                 break
