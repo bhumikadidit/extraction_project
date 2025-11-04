@@ -8,15 +8,6 @@ def fake_html():
     """Fixture for sample HTML to reuse in tests."""
     return '<div class="views-row"><span property="dc:title" content="Test Title"></span><span class="date">2023-01-01</span><div class="content">Test Content</div><a href="test-link"></a></div>'
 
-@pytest.fixture
-def fake_notices_html():
-    """Fixture for notices HTML structure."""
-    return '''
-    <div class="node-article">
-        <h2><a>Test Notice Title</a></h2>
-        <span property="dc:date dc:created">Thu, 01/01/2023 - 12:00</span>
-    </div>
-    '''
 
 def test_scrape_news(fake_html):
     """Test scraping news items from HTML."""
