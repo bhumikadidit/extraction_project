@@ -5,6 +5,12 @@
 # *.PDF
 # *.csv.backup
 
+# Virtual environments
+myenv/
+venv/
+env/
+.venv/
+
 # Python
 __pycache__/
 *.py[cod]
