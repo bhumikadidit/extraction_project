@@ -19,8 +19,13 @@ def test_scrape_news_real_data():
     assert date != 'No date', "Date is default, not real"
     
 def test_pdf_extractor_real_data():
+    
+    #unlink existing the pdf path if any remains from previous tests
+    pdf_path = "data/raw/Flash 1 Report 2081 (2024)_hzq1zgz.pdf"
+    if os.path.exists(pdf_path):
+        os.unlink(pdf_path)
     # Download or generate the PDF freshly
-    pdf_url = "https://example.com/Flash 1 Report 2081 (2024)_hzq1zgz.pdf"  
+    pdf_url = "data/raw/Flash 1 Report 2081 (2024)_hzq1zgz.pdf"  
     response = requests.get(pdf_url)
     assert response.status_code == 200, "Failed to download PDF"
     
