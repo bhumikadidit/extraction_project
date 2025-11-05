@@ -1,5 +1,5 @@
-tabula-py==2.8.0
-camelot-py[cv]==0.10.1
+tabula-py==2.9.0  
+camelot-py==0.10.1  
 pandas==2.0.3
 requests==2.31.0
 beautifulsoup4==4.12.2
