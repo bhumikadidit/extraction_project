@@ -1,31 +1,26 @@
-Extraction Project
-https://img.shields.io/badge/Python-3.7+-blue.svg
-https://img.shields.io/badge/License-MIT-green.svg
-https://img.shields.io/badge/Status-Active-brightgreen.svg
+# Web Scraping and Table Extraction Project
 
 A Python project for web scraping Pokhara municipality data and extracting tables from PDF educational reports.
 
-Project Overview
+## Project Overview
+
 This project provides tools to:
+- Web scrape news and notices from Pokhara Municipality website
+- Extract tables from PDF educational reports (Flash Report 2081)
+- Organize data in a structured format for analysis
 
-Web Scrape news and notices from Pokhara Municipality website
+## Quick Start
 
-Extract Tables from PDF educational reports (Flash Report 2081)
+### Prerequisites
+- Python 3.7 or higher
+- pip (Python package manager)
 
-Organize Data in a structured format for analysis
+### Installation
 
-Quick Start
-Prerequisites
-Python 3.7 or higher
-
-pip (Python package manager)
-
-Installation
-Clone the repository
-
-bash
-git clone <your-repository-url>
-cd extraction_project
+1. Clone the repository
+```bash
+git clone https://github.com/bhumikadidit/web_Scraping_live.git
+cd web_Scraping_live
 Install dependencies
 
 bash
@@ -38,39 +33,37 @@ python scripts/run_webscraping.py
 
 # Run PDF extraction
 python scripts/run_pdf_extraction.py
- Project Structure
+Project Structure
 text
-extraction_project/
+web_Scraping_live/
 │
-├──  LICENSE                    # MIT License
-├──  requirements.txt           # Python dependencies
-├──  .gitignore                 # Git ignore rules
-├──  README.md                  # This file
+├── LICENSE                    # MIT License
+├── requirements.txt           # Python dependencies
+├── .gitignore                # Git ignore rules
+├── README.md                 # This file
 │
-├──  table_tools/               # Main package
+├── table_tools/              # Main package
 │   ├── __init__.py
-│   ├── webscraper/               # Web scraping module
+│   ├── webscraper/           # Web scraping module
 │   │   ├── __init__.py
 │   │   └── pokhara_scraper.py    # Pokhara municipality scraper
-│   └── pdf_extractor/            # PDF extraction module
+│   └── pdf_extractor/        # PDF extraction module
 │       ├── __init__.py
 │       ├── extraction_35.py      # Page 35 specific extraction
 │       ├── extraction_36.py      # Page 36 specific extraction
 │       └── tabula_extractor.py   # General PDF extraction
 │
-├──  scripts/                   # Execution scripts
+├── scripts/                  # Execution scripts
 │   ├── run_webscraping.py        # Run web scraping
 │   └── run_pdf_extraction.py     # Run PDF extraction
 │
-└──  data/                      # Data organization
-    ├── processed/                # Cleaned and processed data
-    │   ├── web_data/             # Scraped web data
-    │   └── extracted_tables/     # Extracted PDF tables
-    ├── raw/                      # Original source files
-    └── temp/                     # Temporary processing files
-
-
- Usage
+└── data/                     # Data organization
+    ├── processed/            # Cleaned and processed data
+    │   ├── web_data/         # Scraped web data
+    │   └── extracted_tables/ # Extracted PDF tables
+    ├── raw/                  # Original source files
+    └── temp/                 # Temporary processing files
+Usage
 Web Scraping
 Extract news and notices from Pokhara Municipality:
 
@@ -123,15 +116,15 @@ tabula-py - PDF table extraction
 camelot-py - Alternative PDF extraction
 
 Key Features
-- Modular and reusable code structure
+Modular and reusable code structure
 
-- Error handling and progress tracking
+Error handling and progress tracking
 
-- UTF-8 encoding for Nepali text support
+UTF-8 encoding for Nepali text support
 
-- Organized data output
+Organized data output
 
-- Simple command-line interface
+Simple command-line interface
 
 Use Cases
 Government Monitoring: Track municipality announcements and educational statistics
@@ -146,6 +139,22 @@ Legal & Ethical Considerations
 This project scrapes publicly available data
 
 Respects website robots.txt and terms of service
+
+Includes delays between requests to avoid server overload
+
+Contributing
+Fork the repository
+
+Create a feature branch
+
+Commit your changes
+
+Push to the branch
+
+Create a Pull Request
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 Includes delays between requests to avoid server overload
 
